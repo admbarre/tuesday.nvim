@@ -2,6 +2,15 @@
 -- Baby's first lua
 
 local M = {}
+
+-- I think this is what is the standard for plugins with Lazy
+function M.setup(opts)
+    opts = opts or {}
+    if opts.debug then
+        print("Tuesday initialized with opts:")
+    end
+end
+
 function M.test()
     local buffer = 0 -- means current buffer
     local cursor = vim.api.nvim_win_get_cursor(buffer)
