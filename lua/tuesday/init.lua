@@ -60,7 +60,7 @@ function M.generate_lines(init_line)
     end
 
     local indents = M.get_indent_level(init_line)
-    local tabs = string.rep("\t",indents+1)
+    local tabs = string.rep("    ",indents+1)
     args = M.split(args,",")
     table.remove(args,1) -- this removes the first self argument
 
